@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="game-name">Rock-Paper-Scissors</h1>
+    </header>
+    <main class="main-container">
+        <div class="player-move-container">
+            <img src="images/Rockf.png" alt="Rock" class="choose-move" onclick="
+                myMove = 'Rock'
+                randomMove = computerMove();
+                result = checkWinner(myMove, randomMove);
+                printResult ();
+            ">
+            <img src="images/paper.png" alt="Paper" class="choose-move" onclick="
+
+                myMove = 'Paper'
+                randomMove = computerMove();
+                result = checkWinner(myMove, randomMove);
+                printResult ();
+            ">
+            <img src="images/scissor.png" alt="Scissor" class="choose-move" onclick="
+                myMove = 'Scissor'
+                randomMove = computerMove();
+                result = checkWinner(myMove, randomMove);
+                printResult ();
+            ">
+        </div>
+        <!-- new feature -->
+        <div class="show-move-container">
+            <div class="show-move-item">
+                <p>Your Move</p>
+                <p>AI Move</p>
+            </div>
+            <div class="show-move-item">
+                <div class="js-player-move-tracker"></div>
+                <div class="js-computer-move-tracker"></div>
+            </div>
+            <div class="result-message"></div>
+        </div>
+
+
+
+
+
+        <!-- end of new feature -->
+        <div class="display">
+            <p class="message score">Pick Your Move</p>
+        </div>
+        <button class="btn" onclick="
+            reset();
+        ">Reset Score</button>
+    </main>
+</body>
+
+<script src="script.js">
+
+</script>
+
+</html>
