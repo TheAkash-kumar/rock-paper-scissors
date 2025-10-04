@@ -79,9 +79,9 @@ function printResult() {
     document.querySelector('.result-message').innerHTML = `${result}`;
     if (result === 'You Lost!') {
         document.querySelector('.result-message').style.color = 'red';
-    } else if ('you Win!'){
+    } else if (result === 'you Win!'){
          document.querySelector('.result-message').style.color = 'green';
-    } else if ('Tie'){
+    } else if (result === 'Tie'){
         document.querySelector('.result-message').style.color = 'yellow';
     }
 
@@ -114,4 +114,5 @@ function computerMoveImageAdder(computerMove) {
     }
 
 }
+
 
