@@ -79,8 +79,10 @@ function printResult() {
     document.querySelector('.result-message').innerHTML = `${result}`;
     if (result === 'You Lost!') {
         document.querySelector('.result-message').style.color = 'red';
-    } else {
+    } else if ('you Win!'){
          document.querySelector('.result-message').style.color = 'green';
+    } else if ('Tie'){
+        document.querySelector('.result-message').style.color = 'yellow';
     }
 
 }
@@ -112,3 +114,4 @@ function computerMoveImageAdder(computerMove) {
     }
 
 }
+
