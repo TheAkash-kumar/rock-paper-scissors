@@ -77,7 +77,11 @@ function printResult() {
     // alert(`You picked ${myMove}.\nComputer Picked ${randomMove}.\n${result}`);
     display.innerText = `Wins: ${win}  \tLose: ${lose}  \tTie: ${tie}`;
     document.querySelector('.result-message').innerHTML = `${result}`;
-
+    if (result === 'You Lost!') {
+        document.querySelector('.result-message').style.color = 'red';
+    } else {
+         document.querySelector('.result-message').style.color = 'green';
+    }
 
 }
 function reset() {
@@ -106,4 +110,5 @@ function computerMoveImageAdder(computerMove) {
     } else if (computerMove === 'Scissor') {
         ele.innerHTML = '<img src="images/scissor.png" alt="" class="computer-move">'
     }
+
 }
